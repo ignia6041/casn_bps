@@ -1,6 +1,14 @@
 # CASN.BPS
 
+Web CASN.BPS adalah web untuk view pengumuman selama masa penerimaan CASN. <br />
+Web ini mulai dimaintain dari tahun 2022 sampai saat ini tahun 2024.
 
+```
+Template Name: BizLand
+Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+Author: BootstrapMade.com
+License: https://bootstrapmade.com/license/
+```
 
 ## Getting started
 
