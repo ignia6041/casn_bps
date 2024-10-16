@@ -36,14 +36,15 @@ class CreateCasnBpsTables extends Migration
         // Documents Table
         $this->forge->addField([
             'id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'auto_increment' => true],
+            'announcement_id' => ['type' => 'INT', 'constraint' => 11, 'unsigned' => true, 'null' => true],
             'title' => ['type' => 'VARCHAR', 'constraint' => 255],
             'description' => ['type' => 'TEXT', 'null' => true],
             'file_path' => ['type' => 'VARCHAR', 'constraint' => 255],
             'publish_date' => ['type' => 'DATE'],
-            'category' => ['type' => 'ENUM', 'constraint' => ['CPNS', 'PPPK']],
             'document_type' => ['type' => 'VARCHAR', 'constraint' => 50],
         ]);
         $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('announcement_id', 'announcements', 'id', 'CASCADE', 'SET NULL');
         $this->forge->createTable('documents');
 
         // FAQ Table
